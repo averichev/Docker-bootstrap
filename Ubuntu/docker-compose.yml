@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  ubuntu:
+    image: "ubuntu"
+
+  console:
+    image: "console"
+    depends_on:
+      - ubuntu
+    volumes:
+      - type: bind
+        source: .
+        target: /home/hostuser/
+      - type: bind
+        source: "$SSH_AUTH_SOCK"
+        target: /ssh-auth.sock
+    environment:
+      - UID=${uid}
+      - GID=${gid}
+      - SSH_AUTH_SOCK=/ssh-auth.sock
+
