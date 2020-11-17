@@ -11,4 +11,12 @@ RUN apt-get update && apt-get install -y \
     apt-utils \
     sudo \
     openssl \
-    systemd
+    systemd \
+    wget \
+    unzip \
+    build-essential \
+    autoconf \
+    automake \
+    libtool \
+    pkg-config \
+    python3-pip
