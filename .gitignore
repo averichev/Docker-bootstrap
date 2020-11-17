@@ -1,2 +1,7 @@
 /Ubuntu/.bash_history
 /.idea/
+/Ubuntu/*
+!/Ubuntu/containers/*
+!/Ubuntu/docker-cli.sh
+!/Ubuntu/docker-compose.yml
+!/Ubuntu/Makefile

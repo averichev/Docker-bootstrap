@@ -5,6 +5,7 @@ services:
 
   console:
     image: "console"
+    hostname: "ubuntu-console"
     depends_on:
       - ubuntu
     volumes:
@@ -15,7 +16,6 @@ services:
         source: "$SSH_AUTH_SOCK"
         target: /ssh-auth.sock
     environment:
-      - UID=${uid}
-      - GID=${gid}
       - SSH_AUTH_SOCK=/ssh-auth.sock
+    container_name: "ubuntu-console"
 

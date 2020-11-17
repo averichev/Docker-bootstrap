@@ -7,6 +7,10 @@ build: ## Построение контейнеров
 down: ## Остановка контейнеров
 	docker-compose down --remove-orphans
 
+.PHONY: up
+down: ## Остановка контейнеров
+	docker-compose up --remove-orphans
+
 .PHONY: console
-console: ## Перейти в терминал контейнера
-	docker-compose run console bash
+console: ## Консоль для мака
+	bash docker-cli.sh console
